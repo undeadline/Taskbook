@@ -1,0 +1,22 @@
+{
+    "name": "undeadline/zombie",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "undeadline",
+            "email": "ermak321@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Zombie\\": "core/"
+        },
+        "files": [
+            "core/helpers.php"
+        ]
+    }
+}
