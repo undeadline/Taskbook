@@ -54,8 +54,12 @@ class Validator
     {
         foreach($this->rules as $key => $item) {
             foreach(explode('|', $item) as $rule) {
-                list($method, $args) = explode(':', $rule);
-                $this->{$method}($key, $args);
+                if (strpos($rule, ':') !== false) {
+                    list($method, $args) = explode(':', $rule);
+                    $this->{$method}($key, $args);
+                } else {
+                    $this->{$rule}($key);
+                }
             }
         }
     }

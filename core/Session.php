@@ -39,7 +39,7 @@ class Session
      */
     public function has($name)
     {
-        return $_SESSION[$name] ? true : false;
+        return isset($_SESSION[$name]) ? true : false;
     }
 
     /**
@@ -61,7 +61,7 @@ class Session
      */
     public function get($key)
     {
-        return $_SESSION[$key];
+        return isset($_SESSION[$key]) ? $_SESSION[$key] : null;
     }
 
     /**

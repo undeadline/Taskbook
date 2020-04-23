@@ -128,7 +128,7 @@ class Request
      */
     public function errors()
     {
-        return $_SESSION['errors'];
+        return isset($_SESSION['errors']) ? $_SESSION['errors'] : null;
     }
 
     /**
@@ -139,7 +139,7 @@ class Request
      */
     public function error($name)
     {
-        return  $_SESSION['errors'][$name];
+        return isset($_SESSION['errors']) ? $_SESSION['errors'][$name] : null;
     }
 
     /**

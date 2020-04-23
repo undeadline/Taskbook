@@ -18,6 +18,7 @@ class HomeController
     public function index()
     {
         list($field, $direction) = [$this->request->query('f'),$this->request->query('s')];
+        $sort = '';
 
         if (Task::is_sortable($field) && Task::direction($direction))
             $sort = "order by $field $direction";
