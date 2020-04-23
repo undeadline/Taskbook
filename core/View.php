@@ -51,5 +51,7 @@ class View
             extract($this->params);
             require_once $view;
         }
+        unset($_SESSION['errors']);
+        unset($_SESSION['success']);
     }
 }
